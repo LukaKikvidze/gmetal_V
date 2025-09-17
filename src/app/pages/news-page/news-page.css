@@ -1,0 +1,390 @@
+:host {
+  --color-primary: #d92631;
+  --color-primary-dark: #881f24;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-text-muted: #626262;
+  --color-background-dark: #000000;
+  --color-background-light: #ffffff;
+  --color-border: #efefef;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue LT GEO 55 Nus', sans-serif;
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* CSS from section:hero */
+.hero-section {
+  position: relative;
+  height: 695px;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-light);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hero-image-container {
+  position: absolute;
+  top: -53px;
+  left: 0;
+  width: 100%;
+  height: 748px;
+}
+
+.hero-image-container .bg-img-1,
+.hero-image-container .bg-img-2 {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.logo-img {
+  width: 64px;
+  height: 64px;
+}
+
+.logo-text {
+  font-family: 'Inter', 'Helvetica Neue LT GEO 75 Mt', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+.main-nav a {
+  font-family: 'Inter', 'Helvetica Neue LT GEO 75 Mt', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.divider-line {
+  width: 1px;
+  height: 35px;
+  background-color: #bdbdbd;
+}
+
+.flag-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hero-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Inter', 'Helvetica Neue LT GEO 95 Mt', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  /* (572 - (220+77)) / 2 approximation */
+  margin: 0 0 137px;
+}
+
+.scroll-down-arrow {
+  width: 44px;
+  height: 80px;
+}
+
+@media (max-width: 1200px) {
+  .main-nav {
+    display: none;
+  }
+  .lang-selector {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .site-header {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 500px;
+  }
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 80px;
+  }
+  .scroll-down-arrow {
+    width: 35px;
+    height: 64px;
+  }
+}
+
+/* CSS from section:news */
+.news-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  margin-top: -60px; /* Overlap with hero */
+  position: relative;
+  background: var(--color-background-light);
+  z-index: 2;
+}
+
+.news-filters {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 50px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  flex-shrink: 0;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  border: none;
+  border-radius: 50px;
+  padding: 17px 58px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.search-button img {
+  width: 21px;
+  height: 20px;
+}
+
+.filter-nav {
+  display: flex;
+  gap: 60px;
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-link {
+  font-family: 'Inter', 'Helvetica Neue LT GEO 75 Mt', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-dark);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px 20px;
+}
+
+.news-card {
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-wrapper {
+  height: 232px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 17px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.card-title {
+  font-family: 'Inter', 'Helvetica Neue LT GEO 75 Mt', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 6px 0;
+}
+
+.card-description {
+  font-family: 'Inter', 'Helvetica Neue LT GEO 65 Nus', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #231f20;
+  margin: 0 0 12px 0;
+  flex-grow: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news-filters {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 20px;
+  }
+  .filter-nav {
+    gap: 20px;
+    justify-content: space-around;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}

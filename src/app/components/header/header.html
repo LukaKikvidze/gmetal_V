@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="logo-wrapper">
+    <img src="assets/project_photos/icon/sdsdsd%201.svg" alt="Georgia Metal Logo" class="logo-img">
+    <span class="logo-text">Georgia Metal</span>
+  </div>
+
+  <!-- ჰამბურგერის ღილაკი -->
+  <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+
+  <!-- აქ ვიყენებთ Angular binding-ს -->
+  <nav class="menu" [ngClass]="{'active': isMenuActive}">
+    <a [routerLink]="['/home']">მთავარი</a>
+    <a [routerLink]="['/about']">ჩვენს შესახებ</a>
+    <a [routerLink]="['/products']">პროდუქცია</a>
+    <a [routerLink]="['/news']">სიახლეები</a>
+    <a [routerLink]="['/gallery']">გალერეა</a>
+    <a href="#">პარტნიორები</a>
+    <!--    <a [routerLink]="['/news']">სიახლეები</a>-->
+    <!--    <a href="#">კარიერა</a>-->
+    <!--    <a href="#">ხარისხი</a>-->
+    <a [routerLink]="['/contact']">კონტაქტი</a>
+  </nav>
+  <div class="icon">
+    <img src="assets/project_photos/icon/georgia%201.svg" alt="Language Switcher">
+  </div>
+</header>
