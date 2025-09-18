@@ -19,14 +19,15 @@
 .products-carousel {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* ცენტრში სწორი მდგომარეობა */
+  align-items: flex-start;
   gap: 20px;
   flex-wrap: nowrap; /* არასდროს გადახვევა */
   overflow-x: auto; /* მობილურზე შესაძლო scroll */
   margin-bottom: 67px;
   padding: 0 10px;
-  scroll-behavior: smooth; /* ნაზავი scroll */
+  scroll-behavior: smooth;
 }
+
 
 .carousel-side-img {
   width: 140px;
@@ -174,28 +175,25 @@
 
 /* Tablets & small screens */
 @media (max-width: 1024px) {
-  .carousel-center-item {
-    width: 400px;
-    height: 320px;
-  }
-  .carousel-side-img {
-    width: 100px;
-    height: 300px;
-  }
-}
+  @media (max-width: 768px) {
+    .products-carousel {
+      justify-content: flex-start; /* გადადის მარცხნიდან */
+    }
 
-@media (max-width: 768px) {
-  .carousel-center-item {
-    width: 320px;
-    height: 220px;
-  }
-  .carousel-side-img {
-    width: 80px;
-    height: 240px;
-  }
-  .center-item-overlay {
-    height: 160px;
-    padding: 15px;
+    .carousel-center-item {
+      width: 320px;
+      height: 220px;
+    }
+
+    .carousel-side-img {
+      width: 80px;
+      height: 240px;
+    }
+
+    .center-item-overlay {
+      height: 160px;
+      padding: 15px;
+    }
   }
 }
 
