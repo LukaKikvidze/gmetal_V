@@ -1,4 +1,4 @@
-/* The design uses specific fonts like 'Helvetica Neue LT GEO'. A web-safe fallback 'Roboto' has been added from Google Fonts. */
+/* Base setup */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-/* CSS from section:hero */
+/* Hero Section */
 #hero-section {
   position: relative;
   height: 633px;
@@ -82,46 +82,29 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: center;
   text-align: center;
   position: relative;
+  padding: 0 20px;
 }
 
 .hero-title {
   font-family: 'Helvetica Neue LT GEO 95 Mt', 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: 64px;
+  font-size: clamp(28px, 6vw, 64px); /* scale responsively */
   line-height: 1.2;
-  margin-bottom: 120px; /* Approximate spacing to the arrow */
+  margin-bottom: 10vh; /* dynamic spacing */
 }
 
 .scroll-down-arrow {
   position: absolute;
-  bottom: 45px; /* Position from bottom of hero section */
+  bottom: 5vh; /* flexible positioning */
 }
 
 .scroll-down-arrow img {
   width: 44px;
-  height: 59px;
+  height: auto;
+  max-height: 59px;
 }
 
-@media (max-width: 1200px) {
-  .main-nav {
-    display: none; /* Simple hide for tablet/mobile, would be replaced by a hamburger menu */
-  }
-}
-
-@media (max-width: 768px) {
-  #hero-section {
-    height: 80vh;
-  }
-  .hero-title {
-    font-size: 48px;
-    margin-bottom: 80px;
-  }
-  .logo span {
-    display: none;
-  }
-}
-
-/* CSS from section:partners */
+/* Partners Section */
 #partners-section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -129,8 +112,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 80px 40px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 60px 40px;
   align-items: center;
   justify-items: center;
 }
@@ -139,15 +122,80 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
+.partner-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+
+/* Large screens (desktops smaller than 1200px) */
+@media (max-width: 1200px) {
+  .main-nav {
+    display: none;
+  }
   #partners-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  #hero-section {
+    height: 70vh;
+  }
+  .hero-title {
+    margin-bottom: 8vh;
+  }
+  .partners-grid {
+    gap: 40px 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  #hero-section {
+    height: 60vh;
+  }
+  .hero-title {
+    font-size: clamp(24px, 8vw, 48px);
+    margin-bottom: 6vh;
+  }
+  .logo span {
+    display: none;
+  }
+  #partners-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px 20px;
+    gap: 40px 20px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  #hero-section {
+    height: 55vh;
+  }
+  .hero-title {
+    font-size: clamp(20px, 9vw, 32px);
+    margin-bottom: 5vh;
+  }
+  .scroll-down-arrow img {
+    width: 30px;
+    max-height: 40px;
+  }
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

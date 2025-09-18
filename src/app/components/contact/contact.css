@@ -37,12 +37,13 @@
 
 /* Secondary button */
 .btn-secondary {
-  background-color: #555; /* მაგალითად ნაცრისფერი */
+  background-color: black; /* მაგალითად ნაცრისფერი */
+  border: 1px solid white;
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #333;
+  background-color: red;
 }
 
 
