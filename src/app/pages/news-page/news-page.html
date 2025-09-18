@@ -2,8 +2,8 @@
   <div class="hero-background">
     <!-- merged image -->
     <div class="hero-image-container">
-      <img src="/assets/project_photos/41.png" alt="Factory background" class="bg-img-1">
-      <img src="/assets/project_photos/41.png" alt="Factory background" class="bg-img-2">
+      <img ngSrc="/assets/project_photos/41.png" alt="Factory background" class="bg-img-1" height="633" width="1440">
+      <img ngSrc="/assets/project_photos/41.png" alt="Factory background" class="bg-img-2" height="633" width="1440">
     </div>
     <div class="hero-overlay"></div>
   </div>
@@ -12,7 +12,7 @@
     <main class="hero-main">
       <h1 class="hero-title">სიახლეები</h1>
       <a href="#news" class="scroll-down-arrow">
-        <img src="/assets/project_photos/icon/ისარი.svg" alt="Scroll down">
+        <img ngSrc="/assets/project_photos/icon/ისარი.svg" alt="Scroll down" height="83" width="61">
       </a>
     </main>
   </div>
@@ -23,7 +23,7 @@
     <div class="news-filters">
       <form class="search-form">
         <button type="submit" class="search-button">
-          <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1466.svg" alt="Search Icon">
+          <img ngSrc="/assets/project_photos/icon/icon%20serch.svg" alt="Search Icon" height="24" width="25">
           <span>ძიება</span>
         </button>
       </form>
@@ -36,133 +36,119 @@
     </div>
 
     <div class="news-grid">
-      <!-- News card item - this structure is repeated for all articles -->
+      <!-- ახალი სიახლე ISO 6935-2:2025 -->
       <article class="news-card">
         <div class="card-image-wrapper">
-          <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/cf0360ac0e7ac79a8a3f47246629c6fb54179e80.png" alt="ISO 9001:2015 Certificate" class="card-image">
+          <img ngSrc="/assets/project_photos/41.png" alt="ISO 6935-2:2025 Standard" class="card-image" height="633"
+               width="1440">
         </div>
         <div class="card-content">
           <div class="card-meta">
             <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1234.svg" alt="Date icon" class="meta-icon">
-              10.3.2024
+              <img ngSrc="/assets/project_photos/icon/formkit_date.svg" alt="Date icon" class="meta-icon" height="13"
+                   width="13">
+              18.09.2025
             </span>
             <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1238.svg" alt="Department icon" class="meta-icon">
+              <img ngSrc="/assets/project_photos/icon/solar_user-linear.svg" alt="Department icon" class="meta-icon"
+                   height="15" width="15">
               ხარისხის დეპარტამენტი
             </span>
           </div>
-          <h3 class="card-title">ISO 9001:2015 სერტიფიკატის მიღება</h3>
-          <p class="card-description">Georgia Metal LLC-მ მიიღო ISO 9001:2015 საერთაშორისო სერტიფიკატი ხარისხის მართვის სისტემისთვის</p>
+          <h3 class="card-title">ISO 6935-2:2025 — ახალი რეგულაციები</h3>
+          <p class="card-description">
+            2025 წლიდან ძალაში შედის ISO 6935-2:2025 სტანდარტი, რომელიც მკაცრ მოთხოვნებს აწესებს
+            ხარისხსა და უსაფრთხოებაზე არმატურის წარმოებაში. ჩვენი ქარხანა უკვე სრულად შეესაბამება ამ სტანდარტებს.
+          </p>
+          <ul class="card-description">
+            <li>მაღალი სიმტკიცე და გამძლეობა</li>
+            <li>ტრასაბელობა (Traceability)</li>
+            <li>ეკო-მოთხოვნები</li>
+            <li>განახლებული სერტიფიცირება</li>
+          </ul>
           <a href="#" class="btn btn-primary">იხილეთ სრულად</a>
         </div>
       </article>
 
+      <!-- არსებული სიახლეები -->
+
       <article class="news-card">
         <div class="card-image-wrapper">
-          <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/cf0360ac0e7ac79a8a3f47246629c6fb54179e80.png" alt="ISO 9001:2015 Certificate" class="card-image">
+          <img ngSrc="/assets/project_photos/35.png" alt="Vacancy - Turner" class="card-image" height="513" width="653">
         </div>
         <div class="card-content">
           <div class="card-meta">
+        <span class="meta-item">
+          <img ngSrc="/assets/project_photos/icon/formkit_date.svg" alt="Date icon" class="meta-icon" height="13"
+               width="13">
+          18.09.2025
+        </span>
             <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1243.svg" alt="Date icon" class="meta-icon">
-              10.3.2024
-            </span>
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1247.svg" alt="Department icon" class="meta-icon">
-              ხარისხის დეპარტამენტი
-            </span>
+          <img ngSrc="/assets/project_photos/icon/solar_user-linear.svg" alt="Vacancy icon" class="meta-icon"
+               height="15" width="15">
+          ვაკანსია: ტოკარი
+        </span>
           </div>
-          <h3 class="card-title">ISO 9001:2015 სერტიფიკატის მიღება</h3>
-          <p class="card-description">Georgia Metal LLC-მ მიიღო ISO 9001:2015 საერთაშორისო სერტიფიკატი ხარისხის მართვის სისტემისთვის</p>
-          <a href="#" class="btn btn-secondary">იხილეთ სრულად</a>
+          <h3 class="card-title">ვაკანსია: ტოკარი</h3>
+          <p class="card-description">
+            სამუშაო ადგილი: ქ. ზესტაფონი, სოფ. არგვეთა <br>
+            ობიექტი: შპს “ჯორჯია მეტალ” მეტალურგიული ქარხანა <br>
+            სამუშაო გრაფიკი: სრული განაკვეთი <br>
+            ანაზღაურება: შეთანხმებით, გამოცდილების შესაბამისად
+          </p>
+          <ul class="card-description">
+            <li>ტოკარის მანქანის მომზადება და გამართვა სამუშაოდ</li>
+            <li>ნაჭრის დამაგრება, ზომების გამოთვლა და გადახედვა</li>
+            <li>დანადგარის მართვა და პროდუქციის დამუშავება ტექნიკური პირობების შესაბამისად</li>
+            <li>ხარისხის შემოწმება პროდუქციის დასრულების შემდეგ</li>
+            <li>სამუშაო დანადგარის და ინსტრუმენტების მოვლა</li>
+          </ul>
+          <a href="/assets/docs/ტოკარი%20.docx" class="btn btn-primary" download>
+            იხილეთ სრულად
+          </a>
         </div>
       </article>
 
       <article class="news-card">
         <div class="card-image-wrapper">
-          <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/cf0360ac0e7ac79a8a3f47246629c6fb54179e80.png" alt="ISO 9001:2015 Certificate" class="card-image">
+          <img ngSrc="/assets/project_photos/41.png" alt="Vacancy - Electrician" class="card-image" height="633"
+               width="1440">
         </div>
         <div class="card-content">
           <div class="card-meta">
+      <span class="meta-item">
+        <img ngSrc="/assets/project_photos/icon/formkit_date.svg" alt="Date icon" class="meta-icon" height="13"
+             width="13">
+        18.09.2025
+      </span>
             <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1260.svg" alt="Date icon" class="meta-icon">
-              10.3.2024
-            </span>
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1264.svg" alt="Department icon" class="meta-icon">
-              ხარისხის დეპარტამენტი
-            </span>
+        <img ngSrc="/assets/project_photos/icon/solar_user-linear.svg" alt="Vacancy icon" class="meta-icon" height="15"
+             width="15">
+        ვაკანსია: ელექტრიკოსი
+      </span>
           </div>
-          <h3 class="card-title">ISO 9001:2015 სერტიფიკატის მიღება</h3>
-          <p class="card-description">Georgia Metal LLC-მ მიიღო ISO 9001:2015 საერთაშორისო სერტიფიკატი ხარისხის მართვის სისტემისთვის</p>
-          <a href="#" class="btn btn-secondary">იხილეთ სრულად</a>
-        </div>
+          <h3 class="card-title">ვაკანსია: ელექტრიკოსი</h3>
+          <p class="card-description">
+            შპს “ჯორჯია მეტალ”-ი აცხადებს ვაკანსიას: <br>
+            პოზიცია: <strong>ელექტრიკოსი</strong> <br>
+            სამუშაო ადგილი: ქ. ზესტაფონი, სოფ. არგვეთა <br>
+            სამუშაო გრაფიკი: სრული განაკვეთი <br>
+            ანაზღაურება: შეთანხმებით, გამოცდილებისა და კვალიფიკაციის მიხედვით
+          </p>
+          <h4 class="card-subtitle">საკვალიფიკაციო მოთხოვნები:</h4>
+          <ul class="card-description">
+            <li>მინიმუმ 5 წლიანი სამუშაო გამოცდილება</li>
+            <li>პროფესიული განათლება ელექტროტექნიკის, ენერგეტიკის ან მსგავსი მიმართულებით</li>
+            <li>ელექტრიკოსის სერტიფიკატი ან კვალიფიკაციის დამადასტურებელი დოკუმენტი</li>
+            <li>ცოდნა საშუალო და მაღალი ძაბვის სისტემების, გამშვებ სისტემების, ძრავების, ტრანსფორმატორების და ავტომატიზაციის პრინციპების შესახებ</li>
+          </ul>
+          <a href="/assets/docs/ელექტრიკოსი-%20ვაკანსია-12,09,2025.docx" class="btn btn-primary" download>
+            იხილეთ სრულად
+          </a>        </div>
       </article>
 
-      <!-- ... More news cards would follow the same pattern ... -->
-      <article class="news-card">
-        <div class="card-image-wrapper">
-          <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/cf0360ac0e7ac79a8a3f47246629c6fb54179e80.png" alt="ISO 9001:2015 Certificate" class="card-image">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1751.svg" alt="Date icon" class="meta-icon">
-              10.3.2024
-            </span>
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1306.svg" alt="Department icon" class="meta-icon">
-              ხარისხის დეპარტამენტი
-            </span>
-          </div>
-          <h3 class="card-title">ISO 9001:2015 სერტიფიკატის მიღება</h3>
-          <p class="card-description">Georgia Metal LLC-მ მიიღო ISO 9001:2015 საერთაშორისო სერტიფიკატი ხარისხის მართვის სისტემისთვის</p>
-          <a href="#" class="btn btn-secondary">იხილეთ სრულად</a>
-        </div>
-      </article>
 
-      <article class="news-card">
-        <div class="card-image-wrapper">
-          <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/cf0360ac0e7ac79a8a3f47246629c6fb54179e80.png" alt="ISO 9001:2015 Certificate" class="card-image">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1299.svg" alt="Date icon" class="meta-icon">
-              10.3.2024
-            </span>
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1310.svg" alt="Department icon" class="meta-icon">
-              ხარისხის დეპარტამენტი
-            </span>
-          </div>
-          <h3 class="card-title">ISO 9001:2015 სერტიფიკატის მიღება</h3>
-          <p class="card-description">Georgia Metal LLC-მ მიიღო ISO 9001:2015 საერთაშორისო სერტიფიკატი ხარისხის მართვის სისტემისთვის</p>
-          <a href="#" class="btn btn-secondary">იხილეთ სრულად</a>
-        </div>
-      </article>
-
-      <article class="news-card">
-        <div class="card-image-wrapper">
-          <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/cf0360ac0e7ac79a8a3f47246629c6fb54179e80.png" alt="ISO 9001:2015 Certificate" class="card-image">
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1302.svg" alt="Date icon" class="meta-icon">
-              10.3.2024
-            </span>
-            <span class="meta-item">
-              <img src="/page/1ed07c46-280f-4fa9-98ea-8f821c8d6cb6/images/26_1314.svg" alt="Department icon" class="meta-icon">
-              ხარისხის დეპარტამენტი
-            </span>
-          </div>
-          <h3 class="card-title">ISO 9001:2015 სერტიფიკატის მიღება</h3>
-          <p class="card-description">Georgia Metal LLC-მ მიიღო ISO 9001:2015 საერთაშორისო სერტიფიკატი ხარისხის მართვის სისტემისთვის</p>
-          <a href="#" class="btn btn-secondary">იხილეთ სრულად</a>
-        </div>
-      </article>
+      <!-- სხვა სიახლეები გაგრძელდება იგივე სტრუქტურით -->
     </div>
   </div>
 </section>
