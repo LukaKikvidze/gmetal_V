@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', 'Helvetica Neue LT GEO 55 Nus', sans-serif;
+  font-family: 'Noto Sans Georgian', sans-serif;
   background-color: var(--bg-light);
   color: var(--text-dark);
 }
@@ -148,6 +148,7 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 .hero-title {
+  font-family: 'Noto Sans Georgian', sans-serif;
   font-size: 64px;
   font-weight: 900;
   margin-bottom: 195px; /* Approximate spacing to the arrow */
@@ -168,6 +169,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* CSS from section:info */
 .info-section {
+  color: black;
   padding: 120px 0;
   background-color: var(--bg-light);
 }
@@ -254,12 +256,14 @@ h1, h2, h3, h4, h5, h6, p {
   gap: 114px;
 }
 .contact-title {
+  font-family: 'Noto Sans Georgian', sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--brand-red-dark);
   margin-bottom: 60px;
 }
 .contact-form .form-group {
+  font-family: 'Noto Sans Georgian', sans-serif;
   margin-bottom: 40px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 10px;
@@ -294,6 +298,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-bottom: 1px solid var(--border-color);
 }
 .submit-btn {
+  font-family: 'Noto Sans Georgian', sans-serif;
   background-color: var(--brand-red);
   color: var(--text-light);
   border: none;
@@ -306,6 +311,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 40px;
 }
 .departments-list {
+  font-family: 'Noto Sans Georgian', sans-serif;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -316,6 +323,15 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 20px;
   padding: 26px 40px;
 }
+
+/* ყველა icon თეთრი იქნება */
+.department-card ul li img {
+  filter: brightness(0) invert(1);
+  width: 20px; /* შეგიძლია ზომაც დააყენო */
+  height: 20px;
+  margin-right: 10px; /* მცირე სივრცე ტექსტსა და icon-ს შორის */
+}
+
 .department-card h3 {
   font-size: 16px;
   font-weight: 500;
@@ -351,6 +367,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* CSS from section:map */
 .map-section {
+  font-family: 'Noto Sans Georgian', sans-serif;
   position: relative;
   height: 516px;
   display: flex;
