@@ -53,6 +53,19 @@
   margin: 0 0 80px;
 }
 
+.icon-bg {
+  filter: brightness(0) invert(1);
+}
+
+.red-bg {
+  background-color: #D92631; /* წითელი */
+  border: 2px solid #fff;   /* თეთრი ბორდერი */
+  border-radius: 50%;       /* წრე */
+  padding: 20px;            /* ზომა */
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
 .contact-grid {
   display: flex;
   justify-content: space-between;
@@ -77,6 +90,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.contact-icon-wrapper.red-bg {
+  background-color: #D92631;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon-wrapper.red-bg .icon-bg {
+  width: 70px;
+  height: 70px;
+  filter: brightness(0) invert(1); /* icon თეთრი */
 }
 
 .contact-icon-wrapper .icon-bg {
@@ -115,88 +144,24 @@
 /* ==========================
    CTA Section
 ========================== */
+/* ==========================
+   CTA Section
+========================== */
 .cta {
   position: relative;
-  font-family: "Helvetica Neue LT GEO 95 Mt", "Helvetica Neue LT GEO 55 Roman", sans-serif;
-  width: 100%; /* 100% სიგანე */
-  max-width: 1940px; /* დესკტოპისთვის მაქსიმუმ */
-  box-sizing: border-box; /* padding არ ზრდის სიგანეს */
-  height: 458px;
+  width: 100%;
+  max-width: 1940px;
   margin: 80px auto;
   border-radius: 25px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 80px 40px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   background-color: #000;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .cta {
-    height: auto; /* ტექსტზე მორგება */
-    padding: 40px 20px; /* კომპაქტური padding */
-  }
-}
-
-@media (max-width: 992px) {
-  .cta {
-    height: 350px;
-    padding: 50px 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .cta {
-    height: auto; /* ავტომატური სიმაღლე ტექსტის მიხედვით */
-    padding: 40px 20px;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .cta-title {
-    font-size: 2rem; /* ~32px */
-    line-height: 1.2;
-  }
-
-  .cta-subtitle {
-    font-size: 1rem; /* ~16px */
-  }
-
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 12px 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .cta {
-    padding: 30px 15px;
-  }
-
-  .cta-title {
-    font-size: 1.75rem; /* ~28px */
-  }
-
-  .cta-subtitle {
-    font-size: 0.9rem; /* ~14px */
-  }
-
-  .cta-button {
-    font-size: 0.85rem;
-    padding: 10px 25px;
-  }
-}
-
-
-/*icon თეთრი*/
-
-.contact-item .icon-bg {
-  filter: brightness(0) invert(1); /* თეთრად აჩვენებს სურათებს */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
 }
 
 .cta::before {
@@ -210,22 +175,21 @@
 
 .cta-content {
   position: relative;
-  z-index: 1; /* რომ ფოტოზე ტექსტი უჩვენდებოდეს */
+  z-index: 1;
   color: #fff;
   max-width: 700px;
 }
 
 .cta-title {
   font-family: 'Noto Sans Georgian', sans-serif;
-  font-size: 2.5rem; /* ~40px */
+  font-size: 2.5rem; /* 40px */
   font-weight: 900;
   margin-bottom: 20px;
   line-height: 1.2;
-  text-align: center; /* სურვილისამებრ */
 }
 
 .cta-subtitle {
-  font-size: 1.1rem; /* ~18px */
+  font-size: 1.1rem; /* 18px */
   margin-bottom: 30px;
   opacity: 0.95;
 }
@@ -248,35 +212,72 @@
   transform: translateY(-3px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ==========================
+   Responsive Styles
+========================== */
+
+/* Desktop large screens */
+@media (max-width: 1440px) {
   .cta {
-    padding: 60px 20px;
+    padding: 70px 35px;
   }
-
   .cta-title {
-    font-size: 2rem; /* ~32px */
+    font-size: 2.2rem; /* ~35px */
   }
-
   .cta-subtitle {
     font-size: 1rem; /* ~16px */
   }
 }
 
-
-/* Responsive */
+/* Tablets & small screens */
 @media (max-width: 1024px) {
-  .contact-item {
-    flex-basis: 40%;
+  .cta {
+    padding: 60px 30px;
+  }
+  .cta-title {
+    font-size: 2rem; /* ~32px */
+  }
+  .cta-subtitle {
+    font-size: 0.95rem; /* ~15px */
+  }
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 12px 30px;
   }
 }
 
+/* Mobile devices */
 @media (max-width: 768px) {
-  .cta-section {
-    padding: 100px 0;
+  .cta {
+    padding: 50px 20px;
+    flex-direction: column;
   }
-  .cta-content h1 {
-    font-size: 48px;
+  .cta-title {
+    font-size: 1.8rem; /* ~28px */
+  }
+  .cta-subtitle {
+    font-size: 0.9rem; /* ~14px */
+  }
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 480px) {
+  .cta {
+    padding: 40px 15px;
+  }
+  .cta-title {
+    font-size: 1.6rem; /* ~26px */
+  }
+  .cta-subtitle {
+    font-size: 0.85rem; /* ~13px */
+  }
+  .cta-button {
+    font-size: 0.85rem;
+    padding: 10px 20px;
   }
 }
 
