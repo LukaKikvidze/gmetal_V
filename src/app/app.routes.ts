@@ -7,7 +7,7 @@ import { ContactPage } from './pages/contact-page/contact-page';
 import { NewsPage } from './pages/news-page/news-page';
 import { ProductsPage } from './pages/products-page/products-page';
 import { AboutPage } from './pages/about-page/about-page';
-
+import { PartnersPage } from './pages/partners-page/partners-page';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -17,4 +17,5 @@ export const routes: Routes = [
   { path: 'news', component: NewsPage },
   { path: 'products', component: ProductsPage },
   { path: 'about', component: AboutPage },
+  { path: 'partners', component: PartnersPage },
 ];

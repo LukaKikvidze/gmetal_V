@@ -62,7 +62,31 @@
   background-color: #b51f28;
 }
 
-/* მობილურებისთვის */
+/* 📱 Resposive Styles */
+@media (max-width: 1200px) {
+  .about-container {
+    gap: 40px;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column; /* ფოტო ქვევით */
@@ -72,5 +96,41 @@
   .about-content,
   .about-image-wrapper {
     flex: 1 1 100%;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about-content p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .about-content h2 {
+    font-size: 24px;
+  }
+
+  .about-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    padding: 10px 25px;
   }
 }

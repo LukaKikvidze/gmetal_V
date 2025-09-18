@@ -1,23 +1,31 @@
-import { Component } from '@angular/core';
-import {CommonModule, NgOptimizedImage} from "@angular/common";
-
-import {RouterLink} from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
-    NgOptimizedImage
+    RouterLink
   ],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrls: ['./header.css']
 })
 export class Header {
   isMenuActive = false;
 
   toggleMenu() {
     this.isMenuActive = !this.isMenuActive;
-    console.log('Menu state:', this.isMenuActive); // Debug-სთვის
+  }
+
+  // HostListener ყურადღებას აქცევს clicks body-ზე
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    // თუ არ დააჭირა menu-ს ან toggle-ს, დახურე menu
+    if (!target.closest('.menu') && !target.closest('.menu-toggle')) {
+      this.isMenuActive = false;
+    }
   }
 }

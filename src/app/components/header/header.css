@@ -1,3 +1,6 @@
+/* ==========================
+   Header Section
+========================== */
 .header {
   position: relative;
   display: flex;
@@ -6,6 +9,7 @@
   padding: 20px 40px;
   background: #070707;
   color: white;
+  z-index: 1000;
 }
 
 .logo-wrapper {
@@ -29,6 +33,11 @@
   color: white;
   text-decoration: none;
   font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #D92631; /* Primary color hover */
 }
 
 .icon img {
@@ -44,7 +53,15 @@
   color: white;
 }
 
-/* 📱 Responsive */
+/* ==========================
+   Responsive (Mobile)
+========================== */
+@media (max-width: 1024px) {
+  .menu {
+    gap: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .menu {
     position: absolute;
@@ -58,6 +75,8 @@
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
   }
 
   .menu a {
@@ -65,14 +84,39 @@
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
+  .menu a:last-child {
+    border-bottom: none;
+  }
+
   .menu.active {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    transition: all 0.4s ease;
   }
 
   .menu-toggle {
     display: block;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .logo-img {
+    width: 35px;
+  }
+
+  .menu {
+    width: 180px;
+    right: 15px;
+    padding: 10px;
+  }
+
+  .menu a {
+    padding: 10px 0;
+    font-size: 14px;
   }
 }

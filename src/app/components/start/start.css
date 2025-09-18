@@ -1,18 +1,19 @@
-
 .hero {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* სრული ეკრანის სიმაღლე */
   background: url("/assets/project_photos/1.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden; /* სქროლის თავიდან ასაცილებლად */
 }
 
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .hero-content {
@@ -27,7 +28,6 @@
   font-weight: 900;
   margin-bottom: 10px;
   font-family: 'Noto Sans Georgian', sans-serif;
-
 }
 
 .subtitle {
@@ -35,7 +35,6 @@
   font-weight: 600;
   margin-bottom: 20px;
   font-family: 'Noto Sans Georgian', sans-serif;
-
 }
 
 .description {
@@ -49,6 +48,7 @@
   display: flex;
   gap: 15px;
   justify-content: center;
+  flex-wrap: wrap; /* მობილურზე გადასვლა */
 }
 
 .btn {
@@ -59,6 +59,7 @@
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .btn.red {
@@ -66,23 +67,19 @@
   color: white;
   width: 137px;
   height: 32px;
-  border: none;            /* default border მოიშოროს */
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;         /* მაუსზე ხელის კურსორი */
-  display: inline-flex;    /* ტექსტი ცენტრში */
+  border: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;   /* თუ <a> იქნება */
-  flex-shrink: 0;          /* რომ არ დაეჭყლიტოს flex-ში */
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .btn.red:hover {
-  background: #b51e27; /* hover ეფექტი */
+  background: #b51e27;
 }
-
 
 .btn.white {
   border: 1px solid white;
@@ -92,13 +89,12 @@
   border-radius: 30px;
   font-size: 16px;
   font-weight: 600;
-  cursor: pointer;         /* მაუსზე ხელის კურსორი */
-  display: inline-flex;    /* ტექსტი ცენტრში */
+  cursor: pointer;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;   /* თუ <a> იქნება */
-  flex-shrink: 0;          /* რომ არ დაეჭყლიტოს flex-ში */
-  transition: background 0.3s ease;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn.white:hover {
@@ -106,56 +102,49 @@
   color: black;
 }
 
-/* --- Responsive --- */
-@media (max-width: 1024px) {
-  .menu {
-    gap: 12px;
-    font-size: 13px;
-  }
-  .main-title {
-    font-size: 42px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 30px;
-  }
-  .menu {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .main-title {
-    font-size: 36px;
-  }
-  .subtitle {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-title {
-    font-size: 28px;
-  }
-  .description {
-    font-size: 12px;
-  }
-  .buttons {
-    flex-direction: column;
-  }
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-
+/* Arrow down */
 .arrow-down {
   position: absolute;
-  bottom: 40px;   /* ეკრანის ბოლოში */
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  z-index: 1;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .main-title { font-size: 42px; }
+  .subtitle { font-size: 16px; }
+  .description { font-size: 13px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-content { padding: 15px; }
+  .main-title { font-size: 36px; }
+  .subtitle { font-size: 14px; }
+  .description { font-size: 12px; }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn { width: 100%; }
+  .btn.white { display: none; }
+  .btn.red {
+    max-width: 200px;
+    align-self: center;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .main-title { font-size: 28px; }
+  .subtitle { font-size: 13px; }
+  .description { font-size: 12px; }
 }

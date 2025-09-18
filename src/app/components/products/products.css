@@ -1,41 +1,12 @@
 /* ==========================
    Products Section
 ========================== */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  border-radius: 30px;
-  font-family: 'Roboto', sans-serif; /* ან სხვა fallback */
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Secondary button */
-.btn-secondary {
-  background-color: #555; /* ნაცრისფერი */
-  color: #fff; /* ტექსტისთვის აუცილებელი */
-  min-width: 178px;
-}
-
-.btn-secondary:hover {
-  background-color: #333;
-}
-
 .products-section {
-  background-color: #000000; /* Black background */
+  background-color: #000000;
   padding: 84px 0;
   border-radius: 50px;
-  margin: 0;
   text-align: center;
-  color: #ffffff; /* White text */
+  color: #ffffff;
 }
 
 .products-title {
@@ -48,12 +19,13 @@
 .products-carousel {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* ცენტრში სწორი მდგომარეობა */
   gap: 20px;
-  flex-wrap: wrap;       /* Allow wrapping on smaller screens */
-  overflow: hidden;      /* Remove horizontal scroll */
+  flex-wrap: nowrap; /* არასდროს გადახვევა */
+  overflow-x: auto; /* მობილურზე შესაძლო scroll */
   margin-bottom: 67px;
-  padding: 0 67px;
+  padding: 0 10px;
+  scroll-behavior: smooth; /* ნაზავი scroll */
 }
 
 .carousel-side-img {
@@ -149,25 +121,18 @@
   min-width: 178px;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-  .products-carousel {
-    justify-content: center;
-  }
-}
-
 /* ==========================
    Stats Section
 ========================== */
 .stats-section {
   padding: 50px 0;
-  margin-top: -125px; /* Overlap with products section */
+  margin-top: -125px;
   position: relative;
   z-index: 10;
 }
 
 .stats-container {
-  background-color: #f5f5f5; /* Light gray */
+  background-color: #f5f5f5;
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
@@ -193,7 +158,7 @@
 .stat-number {
   font-size: 48px;
   font-weight: 900;
-  color: #D92631; /* Primary dark red */
+  color: #D92631;
   line-height: 1.2;
 }
 
@@ -203,14 +168,82 @@
   color: #000000;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .stats-section {
-    margin-top: 0;
-    padding: 20px 0;
+/* ==========================
+   Responsive Styles
+========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .carousel-center-item {
+    width: 400px;
+    height: 320px;
   }
+
+  .carousel-side-img {
+    width: 100px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .center-item-overlay {
+    height: 200px; /* მცირე ეკრანებზე */
+    padding: 15px;
+  }
+}
+
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .products-carousel {
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .carousel-center-item {
+    width: 320px;
+    height: auto;
+  }
+
+  .carousel-side-img {
+    width: 80px;
+    height: 240px;
+  }
+
   .stats-container {
     flex-direction: column;
     gap: 40px;
+    padding: 30px 15px;
+  }
+
+  .stats-section {
+    margin-top: 0;
+    padding: 30px 0;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .carousel-center-item {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .carousel-side-img {
+    width: 70px;
+    height: 200px;
+  }
+
+  .products-title {
+    font-size: 32px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  .stat-label {
+    font-size: 12px;
   }
 }
